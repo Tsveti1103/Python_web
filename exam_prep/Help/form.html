@@ -1,0 +1,6 @@
+{#this is base form#}
+<form method="post" action="{% url 'profile delete' %}">
+    <{{ form }}
+    <button class="delete-profile" type="submit">Delete</button>
+    {% csrf_token %}
+</form>

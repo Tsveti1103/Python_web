@@ -1,0 +1,29 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+    <!--end navigation bar-->
+
+    <div class="body">
+        <!--headings-->
+        <h1>Note Details</h1>
+        <!--headings-->
+
+        <!--details note box-->
+        <div class="note-details-container">
+            <h2>{{ note.title }}</h2>
+            <img class="detail-img" src="https://www.freeiconspng.com/thumbs/tasks-icon/tasks-icon-9.png"
+                 alt="note-image"/>
+            <div>
+                <p>Content</p>
+            </div>
+            <p>
+                {{ note.content }}
+            </p>
+            <div class="right">
+                <a class="button edit" href="/edit/{{ note.id }}">Edit</a>
+                <a class="button delete" href="/delete/{{ note.id }}">Delete</a>
+            </div>
+        </div>
+        <!--end details note box-->
+    </div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+
+    <h1>Delete Recipe</h1>
+    <div class="items-container">
+        <div class="item">
+            <form method="POST" action="{% url 'delete' pk=recipe.pk %}">
+                {{ form }}
+                <input type="submit" class="button delete" value="Delete">
+                {% csrf_token %}
+            </form>
+        </div>
+    </div>
+{% endblock %}
